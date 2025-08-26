@@ -26,21 +26,88 @@ public class conversor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelTitulo = new javax.swing.JPanel();
+        lblTitulo = new javax.swing.JLabel();
+        lblIngrese = new javax.swing.JLabel();
+        txtIngrese = new javax.swing.JTextField();
+        btnConvertir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ejercicio 2 - De Celcius a Farenheit");
+
+        panelTitulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblTitulo.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
+        lblTitulo.setText("Conversor de Temperatura");
+
+        javax.swing.GroupLayout panelTituloLayout = new javax.swing.GroupLayout(panelTitulo);
+        panelTitulo.setLayout(panelTituloLayout);
+        panelTituloLayout.setHorizontalGroup(
+            panelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTituloLayout.createSequentialGroup()
+                .addContainerGap(155, Short.MAX_VALUE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
+        );
+        panelTituloLayout.setVerticalGroup(
+            panelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTituloLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                .addGap(23, 23, 23))
+        );
+
+        lblIngrese.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        lblIngrese.setText("Ingrese temperatura en grados Celsius");
+
+        btnConvertir.setText("Convertir");
+        btnConvertir.setToolTipText("");
+        btnConvertir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(panelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(lblIngrese))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(283, 283, 283)
+                        .addComponent(txtIngrese, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(192, 192, 192)
+                        .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(panelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(lblIngrese, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtIngrese, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConvertirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +145,10 @@ public class conversor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnConvertir;
+    private javax.swing.JLabel lblIngrese;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JPanel panelTitulo;
+    private javax.swing.JTextField txtIngrese;
     // End of variables declaration//GEN-END:variables
 }
