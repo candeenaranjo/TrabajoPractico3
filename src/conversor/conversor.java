@@ -4,6 +4,8 @@
  */
 package conversor;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Leandro Naranjo
@@ -60,8 +62,15 @@ public class conversor extends javax.swing.JFrame {
         lblIngrese.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lblIngrese.setText("Ingrese temperatura en grados Celsius");
 
+        btnConvertir.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnConvertir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-aprobar-y-actualizar-48.png"))); // NOI18N
         btnConvertir.setText("Convertir");
         btnConvertir.setToolTipText("");
+        btnConvertir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConvertirMouseClicked(evt);
+            }
+        });
         btnConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConvertirActionPerformed(evt);
@@ -80,13 +89,14 @@ public class conversor extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(166, 166, 166)
                         .addComponent(lblIngrese))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addComponent(txtIngrese, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(283, 283, 283)
+                            .addComponent(txtIngrese, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(192, 192, 192)
+                            .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,8 +116,15 @@ public class conversor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirActionPerformed
-        // TODO add your handling code here:
+            
     }//GEN-LAST:event_btnConvertirActionPerformed
+
+    private void btnConvertirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirMouseClicked
+        double celcius= Double.parseDouble(txtIngrese.getText());
+        JOptionPane.showMessageDialog(null, "La temperatura en grados Fahrenheit es: "+(celcius*9/5+32),"Mensaje", JOptionPane.INFORMATION_MESSAGE);
+        
+        
+    }//GEN-LAST:event_btnConvertirMouseClicked
 
     /**
      * @param args the command line arguments
