@@ -192,6 +192,8 @@ public class conversor extends javax.swing.JFrame {
                 mensaje = "Por favor elija una opcion";
             }
             JOptionPane.showMessageDialog(this, mensaje, "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+        }catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Error: deben ser números validos", "Error", JOptionPane.ERROR_MESSAGE);
         }
         
         
